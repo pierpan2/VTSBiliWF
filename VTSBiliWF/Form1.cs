@@ -12,7 +12,7 @@ namespace VTSBiliWF
 {
     public partial class Form1 : Form
     {
-        private Mei mei;
+        private Sender vtssender;
 
         public Form1()
         {
@@ -21,12 +21,12 @@ namespace VTSBiliWF
 
         private void button1_Click(object sender, EventArgs e)
         {
-            mei = new Mei();
+            vtssender = new Sender();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            mei.PrintAPIStats(label1);
+            vtssender.PrintAPIStats(label1);
         }
     }
 }

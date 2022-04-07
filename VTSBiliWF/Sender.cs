@@ -12,9 +12,9 @@ using VTS.Models.Impl;
 
 namespace VTSBiliWF
 {
-    internal class Mei : VTSPlugin
+    internal class Sender : VTSPlugin
     {
-        public Mei()
+        public Sender()
         {
             this._pluginAuthor = "PierPan";
             this._pluginName = "VTSBili";
