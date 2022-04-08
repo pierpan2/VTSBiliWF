@@ -77,17 +77,17 @@ namespace VTS.Networking.Impl{
     /// This class is not necessary for non-Unity uses.
     /// </summary>
     public class MainThreadUtil {
-        private static MainThreadUtil INSTANCE;
+        // private static MainThreadUtil INSTANCE;
         private static ConcurrentQueue<System.Action> CALL_QUEUE = new ConcurrentQueue<Action>();
 
         
         public static void Setup(){
-            INSTANCE = new GameObject("MainThreadUtil").AddComponent<MainThreadUtil>();
+            // INSTANCE = new GameObject("MainThreadUtil").AddComponent<MainThreadUtil>();
         }
 
         private void Awake(){
-            gameObject.hideFlags = HideFlags.HideAndDontSave;
-            DontDestroyOnLoad(gameObject);
+            // gameObject.hideFlags = HideFlags.HideAndDontSave;
+            // DontDestroyOnLoad(gameObject);
         }
 
         /// <summary>

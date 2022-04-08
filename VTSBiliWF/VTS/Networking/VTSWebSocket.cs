@@ -33,13 +33,13 @@ namespace VTS.Networking {
             StartUDP();
         }
 
-        private void OnDestroy(){
+        public void Close(){
             this._ws.Stop();
         }
 
-        private void FixedUpdate(){
+        public void Update(){
             ProcessResponses();
-            CheckPorts();
+            // CheckPorts();
         }
 
         private void CheckPorts(){
@@ -198,7 +198,7 @@ namespace VTS.Networking {
                     string output = _json.ToJson(request);
                     this._ws.Send(output);
                 }catch(Exception e){
-                    System.Diagnostics.Debug.WriteLine(e);
+                    Debug.WriteLine(e);
                     VTSErrorData error = new VTSErrorData();
                     error.data.errorID = ErrorID.InternalServerError;
                     error.data.message = e.Message;

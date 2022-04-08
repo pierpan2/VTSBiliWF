@@ -17,45 +17,45 @@ namespace VTS {
     {
         #region Properties
 
-        
-        protected string _pluginName = "ExamplePlugin";
+
+        public string _pluginName = "ExamplePlugin";
         /// <summary>
         /// The name of this plugin. Required for authorization purposes..
         /// </summary>
         /// <value></value>
         public string PluginName { get { return this._pluginName; } }
-        
-        protected string _pluginAuthor = "ExampleAuthor";
+
+        public string _pluginAuthor = "ExampleAuthor";
         /// <summary>
         /// The name of this plugin's author. Required for authorization purposes.
         /// </summary>
         /// <value></value>
         public string PluginAuthor { get { return this._pluginAuthor; } }
-        
-        protected Image _pluginIcon = null;
+
+        public Image _pluginIcon = null;
         /// <summary>
         /// The icon for this plugin.
         /// </summary>
         /// <value></value>
         public Image PluginIcon { get { return this._pluginIcon; } }
 
-        private VTSWebSocket _socket = null;
+        public VTSWebSocket _socket = null;
         /// <summary>
         /// The underlying WebSocket for connecting to VTS.
         /// </summary>
         /// <value></value>
-        protected VTSWebSocket Socket { get { return this._socket; } }
+        public VTSWebSocket Socket { get { return this._socket; } }
 
-        private string _token = null;
+        public string _token = null;
 
-        private ITokenStorage _tokenStorage = null;
+        public ITokenStorage _tokenStorage = null;
         /// <summary>
         /// The underlying Token Storage mechanism for connecting to VTS.
         /// </summary>
         /// <value></value>
-        protected ITokenStorage TokenStorage { get { return this._tokenStorage; } }
+        public ITokenStorage TokenStorage { get { return this._tokenStorage; } }
 
-        private bool _isAuthenticated = false;
+        public bool _isAuthenticated = false;
         /// <summary>
         /// Is the plugin currently authenticated?
         /// </summary>

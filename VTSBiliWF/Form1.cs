@@ -26,7 +26,13 @@ namespace VTSBiliWF
 
         private void button2_Click(object sender, EventArgs e)
         {
-            vtssender.PrintAPIStats(label1);
+            vtssender.PrintAPIStats();
+            vtssender.ActivateExpression("expression1");
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            vtssender.Close();
         }
     }
 }
