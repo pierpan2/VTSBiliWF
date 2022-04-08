@@ -14,7 +14,7 @@ using VTS.Models.Impl;
 
 namespace VTSBiliWF
 {
-    internal class Sender : VTSPlugin
+    public class Sender : VTSPlugin
     {
         private CancellationTokenSource cancelSource;
 
